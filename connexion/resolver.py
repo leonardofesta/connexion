@@ -226,7 +226,7 @@ class MethodViewResolver(RestyResolver):
                 "Requests to a collection endpoint will be routed to .get()"
             )
         super(MethodViewResolver, self).__init__(*args, **kwargs)
-        self.initialized_views = []
+        self.initialized_views: list = []
 
     def resolve_operation_id(self, operation):
         """
